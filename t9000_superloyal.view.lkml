@@ -26,7 +26,7 @@ view: t9000_superloyal {
     sql: ${TABLE}.ntile_5 ;;
   }
 
-  dimension: row_id {
+  dimension: adid {
     type: string
     sql: ${TABLE}.row_ID ;;
   }
