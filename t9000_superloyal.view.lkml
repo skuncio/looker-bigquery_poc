@@ -31,6 +31,14 @@ view: t9000_superloyal {
     sql: ${TABLE}.row_ID ;;
   }
 
+  measure: distinct_users {
+    view_label: "User"
+    type: count_distinct
+    value_format: "[>=1000000]0.0,,\"M\";[>=1000]0.0,\"K\";0"
+    sql: ${adid} ;;
+#    approximate: yes
+  }
+
   measure: count {
     type: count
     drill_fields: []
